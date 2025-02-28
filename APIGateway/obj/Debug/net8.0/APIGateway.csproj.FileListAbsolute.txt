@@ -47,3 +47,4 @@ C:\Users\User\Desktop\Microservice\Microservice\APIGateway\obj\Debug\net8.0\refi
 C:\Users\User\Desktop\Microservice\Microservice\APIGateway\obj\Debug\net8.0\APIGateway.pdb
 C:\Users\User\Desktop\Microservice\Microservice\APIGateway\obj\Debug\net8.0\APIGateway.genruntimeconfig.cache
 C:\Users\User\Desktop\Microservice\Microservice\APIGateway\obj\Debug\net8.0\ref\APIGateway.dll
+C:\Users\User\Desktop\Microservice\Microservice\APIGateway\obj\Debug\net8.0\APIGateway.sourcelink.json

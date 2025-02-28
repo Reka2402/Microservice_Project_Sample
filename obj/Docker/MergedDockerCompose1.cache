@@ -3,7 +3,7 @@ services:
   apigateway:
     build:
       context: C:\Users\User\Desktop\Microservice\Microservice
-      dockerfile: APIGateway/Dockerfile
+      dockerfile: ApiGateway/Dockerfile
       args:
         BUILD_CONFIGURATION: Debug
         LAUNCHING_FROM_VS: "true"
@@ -11,7 +11,7 @@ services:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: APIGateway
       target: base
-    container_name: APIGateway
+    container_name: api-gateway
     entrypoint:
       - dotnet
       - --roll-forward
@@ -32,8 +32,12 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     networks:
-      default: null
+      backend: null
     ports:
+      - mode: ingress
+        target: 80
+        published: "8001"
+        protocol: tcp
       - mode: ingress
         target: 8080
         protocol: tcp
@@ -111,6 +115,76 @@ services:
         read_only: true
         bind:
           create_host_path: true
+  customerdb:
+    container_name: customer-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 1433
+        published: "18001"
+        protocol: tcp
+  customerwebapi:
+    build:
+      context: C:\Users\User\Desktop\Microservice\Microservice
+      dockerfile: CustomerWebApi/Dockerfile
+    container_name: customer-api
+    environment:
+      DB_HOST: customerdb
+      DB_NAME: dms_customer
+      DB_SA_PASSWORD: password@12345#
+    image: customerwebapi
+    networks:
+      backend: null
+  orderdb:
+    container_name: order-db
+    image: mongo
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "18005"
+        protocol: tcp
+  orderwebapi:
+    build:
+      context: C:\Users\User\Desktop\Microservice\Microservice
+      dockerfile: OrderWebApi/Dockerfile
+    container_name: order-api
+    environment:
+      DB_HOST: orderdb
+      DB_NAME: dms_order
+    image: orderwebapi
+    networks:
+      backend: null
+  productdb:
+    container_name: product-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password@12345#
+    image: mysql:8.0.29-oracle
+    networks:
+      backend: null
+    ports:
+      - mode: ingress
+        target: 3306
+        published: "18003"
+        protocol: tcp
+  productwebapi:
+    build:
+      context: C:\Users\User\Desktop\Microservice\Microservice
+      dockerfile: ProductWebApi/Dockerfile
+    container_name: product-api
+    environment:
+      DB_HOST: productdb
+      DB_NAME: dms_product
+      DB_ROOT_PASSWORD: password@12345#
+    image: productwebapi
+    networks:
+      backend: null
 networks:
-  default:
-    name: dockercompose2909670607754507847_default
+  backend:
+    name: dockercompose2909670607754507847_backend

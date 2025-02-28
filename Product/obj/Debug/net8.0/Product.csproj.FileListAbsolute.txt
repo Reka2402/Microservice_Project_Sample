@@ -181,3 +181,4 @@ C:\Users\User\Desktop\Microservice\Microservice\Product\obj\Debug\net8.0\refint\
 C:\Users\User\Desktop\Microservice\Microservice\Product\obj\Debug\net8.0\Product.pdb
 C:\Users\User\Desktop\Microservice\Microservice\Product\obj\Debug\net8.0\Product.genruntimeconfig.cache
 C:\Users\User\Desktop\Microservice\Microservice\Product\obj\Debug\net8.0\ref\Product.dll
+C:\Users\User\Desktop\Microservice\Microservice\Product\obj\Debug\net8.0\Product.sourcelink.json

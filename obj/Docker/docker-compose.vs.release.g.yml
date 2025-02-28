@@ -1,6 +1,5 @@
 services:
   apigateway:
-    container_name: "APIGateway"
     build:
       args:
         LAUNCHING_FROM_VS: true

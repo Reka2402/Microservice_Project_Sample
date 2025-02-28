@@ -170,3 +170,13 @@ C:\Users\User\Desktop\Microservice\Microservice\Order\obj\Debug\net8.0\refint\Or
 C:\Users\User\Desktop\Microservice\Microservice\Order\obj\Debug\net8.0\Order.pdb
 C:\Users\User\Desktop\Microservice\Microservice\Order\obj\Debug\net8.0\Order.genruntimeconfig.cache
 C:\Users\User\Desktop\Microservice\Microservice\Order\obj\Debug\net8.0\ref\Order.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\IPAddressRange.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\bin\Debug\net8.0\Ocelot.dll
+C:\Users\User\Desktop\Microservice\Microservice\Order\obj\Debug\net8.0\Order.sourcelink.json

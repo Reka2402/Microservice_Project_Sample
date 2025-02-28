@@ -2,7 +2,8 @@ using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddServiceDefaults();
+// Remove the line causing the error
+// builder.AddServiceDefaults();
 
 // Add services to the container.
 
@@ -15,7 +16,8 @@ builder.Services.AddOcelot();
 
 var app = builder.Build();
 
-app.MapDefaultEndpoints();
+// Remove the line causing the error
+// app.MapDefaultEndpoints();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
